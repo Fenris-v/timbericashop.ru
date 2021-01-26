@@ -11,18 +11,6 @@
 @font-face {
   font-family: OpenSansItalic;
   src: url(../fonts/OpenSans-Italic.ttf); }
-@font-face {
-  font-family: OpenSans;
-  src: url(../fonts/OpenSans-Regular.ttf); }
-@font-face {
-  font-family: OpenSansBold;
-  src: url(../fonts/OpenSans-Bold.ttf); }
-@font-face {
-  font-family: OpenSansLight;
-  src: url(../fonts/OpenSans-Light.ttf); }
-@font-face {
-  font-family: OpenSansItalic;
-  src: url(../fonts/OpenSans-Italic.ttf); }
 /* RESET */
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
@@ -467,8 +455,8 @@ body {
   line-height: 1.3; }
 
 .wrapper {
-  max-width: 1360px;
-  padding: 0 30px;
+  max-width: 1330px;
+  padding: 0 15px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -505,6 +493,9 @@ body {
   .btn_big {
     line-height: 60px;
     padding: 0 50px; }
+  .btn_lines {
+    line-height: 1.2;
+    padding: 10px 25px; }
 
 .bold {
   font-family: OpenSansBold, sans-serif;
@@ -533,7 +524,7 @@ body {
   .topPanel__menu {
     list-style: none;
     display: flex; }
-    .topPanel__menu li {
+    .topPanel__menu li:not(:last-child) {
       margin-right: 40px; }
     .topPanel__menu a {
       font-size: 16px;
@@ -922,7 +913,8 @@ body {
   .standards_top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 70px; }
+    margin-bottom: 70px;
+    flex-wrap: wrap; }
     .standards_top_left {
       width: 310px;
       margin-right: 70px;
@@ -1179,7 +1171,8 @@ body {
   .colors__count {
     display: flex;
     align-items: center;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    flex-wrap: wrap; }
     .colors__count__num {
       font-size: 160px;
       font-weight: bold;
@@ -1204,7 +1197,8 @@ body {
   text-align: center; }
   .why__items {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex-wrap: wrap; }
     .why__items__item {
       background: #EDEDED;
       width: 24%;
@@ -1266,7 +1260,8 @@ footer {
   padding: 70px 0 30px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  flex-wrap: wrap; }
   .footer__info {
     width: 22%;
     text-align: center; }
@@ -1339,7 +1334,8 @@ footer {
     padding-bottom: 70px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    flex-wrap: wrap; }
     .footer_bottom > div {
       width: 22%;
       flex-shrink: 0; }
@@ -1361,30 +1357,6 @@ footer {
       max-width: 150px;
       line-height: 1.3; }
 
-@font-face {
-  font-family: OpenSans;
-  src: url(../fonts/OpenSans-Regular.ttf); }
-@font-face {
-  font-family: OpenSansBold;
-  src: url(../fonts/OpenSans-Bold.ttf); }
-@font-face {
-  font-family: OpenSansLight;
-  src: url(../fonts/OpenSans-Light.ttf); }
-@font-face {
-  font-family: OpenSansItalic;
-  src: url(../fonts/OpenSans-Italic.ttf); }
-@font-face {
-  font-family: OpenSans;
-  src: url(../fonts/OpenSans-Regular.ttf); }
-@font-face {
-  font-family: OpenSansBold;
-  src: url(../fonts/OpenSans-Bold.ttf); }
-@font-face {
-  font-family: OpenSansLight;
-  src: url(../fonts/OpenSans-Light.ttf); }
-@font-face {
-  font-family: OpenSansItalic;
-  src: url(../fonts/OpenSans-Italic.ttf); }
 .header__hamburger, .headerNav_adaptive {
   display: none; }
 
@@ -1548,29 +1520,83 @@ footer {
   .headerNav__items_adaptive li:last-child a {
     border-bottom: #000000 1px solid; } }
 /* RESPONSIVE */
-@font-face {
-  font-family: OpenSans;
-  src: url(../fonts/OpenSans-Regular.ttf); }
-@font-face {
-  font-family: OpenSansBold;
-  src: url(../fonts/OpenSans-Bold.ttf); }
-@font-face {
-  font-family: OpenSansLight;
-  src: url(../fonts/OpenSans-Light.ttf); }
-@font-face {
-  font-family: OpenSansItalic;
-  src: url(../fonts/OpenSans-Italic.ttf); }
-@font-face {
-  font-family: OpenSans;
-  src: url(../fonts/OpenSans-Regular.ttf); }
-@font-face {
-  font-family: OpenSansBold;
-  src: url(../fonts/OpenSans-Bold.ttf); }
-@font-face {
-  font-family: OpenSansLight;
-  src: url(../fonts/OpenSans-Light.ttf); }
-@font-face {
-  font-family: OpenSansItalic;
-  src: url(../fonts/OpenSans-Italic.ttf); }
+@media only screen and (max-width: 1300px) {
+  .header .social {
+    display: none; }
+
+  .header__nav nav {
+    display: none; }
+
+  .standards_top_right {
+    width: 100%;
+    margin: 40px 0 0; }
+
+  .standards_top_left {
+    width: 35%;
+    margin-right: 5%; }
+
+  .standards_top_center {
+    width: 60%; }
+
+  .why__items__item {
+    width: 48%; }
+    .why__items__item:first-child, .why__items__item:nth-child(2) {
+      margin-bottom: 100px; }
+
+  .footer__info .logo a {
+    padding: 10px; }
+
+  .footer__info {
+    width: 25%; } }
+@media only screen and (max-width: 1100px) {
+  .footer_bottom > div {
+    width: 48%;
+    text-align: center;
+    margin-bottom: 20px; }
+
+  .footer_bottom .topPanel__delivery {
+    max-width: none; }
+
+  .footer_bottom {
+    padding-bottom: 20px; } }
+@media only screen and (max-width: 1000px) {
+  .header__colors, .header__contacts, .topPanel__delivery {
+    display: none; }
+
+  .topPanel__menu {
+    margin-left: auto; }
+
+  .categories__item {
+    width: 49%; }
+
+  .standards_top_left {
+    width: 50%; }
+
+  .standards_top_center {
+    width: 45%; }
+
+  .standards__item {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    text-align: center; }
+    .standards__item img {
+      margin-right: 0;
+      margin-bottom: 40px; }
+
+  .new__list__item {
+    width: 50%; }
+
+  .new__list__item:first-child,
+  .new__list__item:nth-child(4),
+  .new__list__item:nth-child(5),
+  .new__list__item:nth-child(8) {
+    -webkit-border-radius: 0 0 0 0;
+    -moz-border-radius: 0 0 0 0;
+    border-radius: 0 0 0 0; }
+
+  .footer > div {
+    width: 45%;
+    margin-bottom: 50px; } }
 
 /*# sourceMappingURL=style.css.map */
