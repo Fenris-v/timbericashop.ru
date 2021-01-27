@@ -28,6 +28,9 @@
   width: 100%
   +border-radius(3px)
 
+.adaptive-menu-toggle:hover
+  background: none !important
+
 .menu-toggle-line--1
   top: 0
   @include transition(width 0.2s ease 0.3s)
@@ -91,19 +94,22 @@
   -o-transition: opacity 0.2s ease 0.4s, -o-transform 0.2s ease 0.4s
   -moz-transition: opacity 0.2s ease 0.4s, transform 0.2s ease 0.4s, -moz-transform 0.2s ease 0.4s
 
-@media only screen and (max-width: 640px)
+@media only screen and (max-width: 1300px)
   .header__hamburger
     display: block !important
     position: absolute
-    right: 10px
-    top: 20px
+    right: 15px
+    top: 50%
+    @include transform(translateY(-50%))
 
   .headerNav_adaptive
-    background: $grey
+    background: $aqua
     display: none
-    padding-top: 60px
+    padding-top: 20px
     position: absolute
-    top: 0
+    top: 50px
+    right: 0
+    max-width: 350px
     +transform(translateX(-100%))
     width: 100%
     z-index: 3
@@ -113,7 +119,7 @@
     +transform(translateX(0))
 
   .headerNav__items_adaptive a
-    background: $grey
+    background: $aqua
     border: $textBlack 1px solid
     border-bottom: none
     color: $grey
@@ -125,3 +131,34 @@
 
   .headerNav__items_adaptive li:last-child a
     border-bottom: $textBlack 1px solid
+
+  .headerNav_adaptive ul
+    flex-direction: column
+
+  .header__nav nav ul li:not(:last-child)::after
+    content: none
+
+  .headerNav_adaptive
+    .social, .header__contacts
+      display: flex
+
+    .social
+
+      ul
+        flex-direction: row
+
+      li a
+        background: #EDEDED
+        text-decoration: none
+        width: 50px
+        height: 50px
+        -webkit-border-radius: 50%
+        -moz-border-radius: 50%
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 0
+
+        img
+          margin-left: 0

@@ -2,7 +2,7 @@
   .header .social
     display: none
 
-  .header__nav nav
+  .header__nav nav, .header__nav > div a.header__nav__search
     display: none
 
   .standards_top_right
@@ -78,3 +78,45 @@
   .footer > div
     width: 45%
     margin-bottom: 50px
+
+@media only screen and (max-width: 1000px)
+  .standards_top_left
+    width: 100%
+    margin-bottom: 40px
+    margin-right: 0
+
+  .standards_top_center
+    width: 100%
+
+  .standards__title
+    font-size: 25px
+
+  .standards_middle
+    flex-direction: column
+
+  .standards__item
+    width: 100%
+    flex-direction: row
+    align-items: center
+    text-align: center
+    margin-bottom: 20px
+
+  .standards__item img
+    margin-right: 20px
+    margin-bottom: 0
+
+  .standards__item__content
+    width: 100%
+
+  .s_colors > img
+    display: none
+
+  .colors
+    flex-direction: column
+
+    &_reverse
+      flex-direction: column-reverse
+
+  .colors_left, .colors_right
+    width: 100%
+    margin-bottom: 40px
