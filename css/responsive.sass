@@ -1,3 +1,11 @@
+@media only screen and (max-width: 1500px)
+  .factoryPhoto__slider
+    .slick-arrow.slick-next
+      right: 0
+
+    .slick-arrow.slick-prev
+      left: 0
+
 @media only screen and (max-width: 1300px)
   .header .social
     display: none
@@ -79,7 +87,6 @@
     width: 45%
     margin-bottom: 50px
 
-@media only screen and (max-width: 1000px)
   .standards_top_left
     width: 100%
     margin-bottom: 40px
@@ -120,3 +127,39 @@
   .colors_left, .colors_right
     width: 100%
     margin-bottom: 40px
+
+  .history
+    flex-direction: column
+
+    &_left, &_right
+      width: 100%
+
+    &_right
+      margin-left: 0
+
+  .factories_top
+    flex-direction: column
+
+    h2
+      margin-bottom: 30px
+      width: 100%
+
+    p
+      width: 100%
+      margin-left: 0
+
+  .factories
+    &__container
+      flex-direction: column
+
+    &_left, &_right
+      width: 100%
+
+    &_left
+      margin: 0 0 40px
+
+  .whyGeo
+    flex-direction: column
+
+    &_left, &_right
+      width: 100%

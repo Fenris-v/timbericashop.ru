@@ -25,15 +25,17 @@ $(document).ready(() => {
         arrows: true,
         dots: false,
         slidesToShow: 3,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 4000,
         speed: 1000,
         prevArrow: '<div class="slick-arrow slick-prev"><img src="images/slider-arrow.png" alt="prev" /></div>',
         nextArrow: '<div class="slick-arrow slick-next"><img src="images/slider-arrow.png" alt="next" /></div>',
         responsive: [{
-            breakpoint: 767,
+            breakpoint: 900,
             settings: {
-                arrows: false
+                arrows: false,
+                dots: true,
+                slidesToShow: 2
             }
         }]
     });

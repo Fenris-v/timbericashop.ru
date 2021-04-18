@@ -1821,6 +1821,11 @@ footer {
     .headerNav_adaptive .social li a img {
       margin-left: 0; } }
 /* RESPONSIVE */
+@media only screen and (max-width: 1500px) {
+  .factoryPhoto__slider .slick-arrow.slick-next {
+    right: 0; }
+  .factoryPhoto__slider .slick-arrow.slick-prev {
+    left: 0; } }
 @media only screen and (max-width: 1300px) {
   .header .social {
     display: none; }
@@ -1898,8 +1903,8 @@ footer {
 
   .footer > div {
     width: 45%;
-    margin-bottom: 50px; } }
-@media only screen and (max-width: 1000px) {
+    margin-bottom: 50px; }
+
   .standards_top_left {
     width: 100%;
     margin-bottom: 40px;
@@ -1938,6 +1943,34 @@ footer {
 
   .colors_left, .colors_right {
     width: 100%;
-    margin-bottom: 40px; } }
+    margin-bottom: 40px; }
+
+  .history {
+    flex-direction: column; }
+    .history_left, .history_right {
+      width: 100%; }
+    .history_right {
+      margin-left: 0; }
+
+  .factories_top {
+    flex-direction: column; }
+    .factories_top h2 {
+      margin-bottom: 30px;
+      width: 100%; }
+    .factories_top p {
+      width: 100%;
+      margin-left: 0; }
+
+  .factories__container {
+    flex-direction: column; }
+  .factories_left, .factories_right {
+    width: 100%; }
+  .factories_left {
+    margin: 0 0 40px; }
+
+  .whyGeo {
+    flex-direction: column; }
+    .whyGeo_left, .whyGeo_right {
+      width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
